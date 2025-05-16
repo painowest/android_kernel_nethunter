@@ -2,7 +2,7 @@ menu "NetHunter Support"
 
 config NETHUNTER_SUPPORT
 	bool "Basic nethunter support"
-	default n
+	default y
 	help
 		Enable basic nethunter support in-kernel which are sysvipc, module support, and mac80211 support.
 
@@ -11,6 +11,7 @@ config NETHUNTER_SUPPORT
 	select MODULE_UNLOAD
 	select MODVERSIONS
 	select MMC
+	select CFG80211_CRDA_SUPPORT
 	select CFG80211_WEXT
 	select MAC80211
 	select MAC80211_MESH
